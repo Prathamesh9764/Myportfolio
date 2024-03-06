@@ -145,7 +145,7 @@ section span:hover {
         flex-direction: column; /* Switch to a column layout on smaller screens */
     }
     .image_right {
-        width: 40%; /* Make the image take up the full width on smaller screens */
+        width: 100%; /* Make the image take up the full width on smaller screens */
     }
 }
 
