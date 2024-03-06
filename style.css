@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.navbar {
+    position: static;
+    display: flex;
+    background-color: rgb(22, 216, 22);
+    height: 40px;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.bar {
+    margin-left: 20px;
+}
+
+
+.nav {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.content {
+    background-color: black;
+}
+
+
+/* Section styles */
+section {
+    position: absolute; 
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+/* Animated gradient effect */
+section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000, #0f0, #000);
+    animation: animate 5s linear infinite;
+}
+/* Animation keyframes */
+@keyframes animate {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+/* Styling for individual spans */
+section span {
+    position: relative;
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    z-index: 2;
+    transition: 1.5s;
+}
+section span:hover {
+    background: #0f0;
+    transition: 0s;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 900px) {
+    section span {
+        width: calc(10vw - 2px);
+        height: calc(10vw - 2px);
+    }
+}
+@media (max-width: 600px) {
+    section span {
+        width: calc(20vw - 2px);
+        height: calc(20vw - 2px);
+    }
+}
+
+
+
+/* Sign-in  styles */
+.myself {
+    position: absolute;
+    width: auto;
+    background: #222;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+}
+.content {
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    color: white;
+    background: #222;
+    align-items: center;
+}
+
+.text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+    
+}
+
+.image_right {
+    width: 30%;
+    border-radius: 50%;
+    background: #0f0;
+}
+
+.image_right:hover{
+    background: rgb(221, 252, 182);
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Switch to a column layout on smaller screens */
+    }
+    .image_right {
+        width: 40%; /* Make the image take up the full width on smaller screens */
+    }
+}
+

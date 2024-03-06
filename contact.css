@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.navbar {
+    display: flex;
+    background-color: rgb(22, 216, 22);
+    height: 40px;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.bar {
+    margin-left: 20px;
+}
+
+
+.nav {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+/* Section styles */
+section {
+    position: absolute; 
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+/* Animated gradient effect */
+section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000, #0f0, #000);
+    animation: animate 5s linear infinite;
+}
+/* Animation keyframes */
+@keyframes animate {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+/* Styling for individual spans */
+section span {
+    position: relative;
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    z-index: 2;
+    transition: 1.5s;
+}
+section span:hover {
+    background: #0f0;
+    transition: 0s;
+}
+
+
+.contact {
+    position: absolute;
+    width: 100%; /* Adjusted to be relative to the viewport width */
+    max-width: 700px; /* Added to restrict width on larger screens */
+    background: #f4eded;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgba(233, 23, 23, 0.9);
+    height: auto; /* Changed to auto so height adjusts according to content */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .contact {
+        width: 90%; /* Adjusted width for smaller screens */
+        padding: 20px; /* Adjusted padding for smaller screens */
+        max-height: 400px; /* Limiting the height for smaller screens */
+     overflow: auto; /* Adding overflow to handle content overflow */
+    }
+}
+
+.contact ul {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    padding: 20px;
+}
+ .contact ul p{
+    padding-bottom: 20px;
+ }
+
+/* .get {
+    
+    border: solid 2px red;
+} */
+
+.info input[type="text"],
+.info input[type="email"] {
+    height: 30px; /* Adjust the height as needed */
+    /* Additional styling */
+    width: auto;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 1px 5px 3px rgb(54, 231, 54);
+}
+
+.text textarea {
+    box-shadow: 2px 1px 5px 3px rgb(54, 231, 54);
+    padding: 12px 20px;
+    font-family: Arial;
+}
+
+.submit input[type = "submit"]{
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgb(80, 166, 232);
+    box-shadow: 2px 1px 5px 3px rgb(54, 231, 54);
+    cursor: pointer;
+    
+}
